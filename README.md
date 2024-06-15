@@ -4,7 +4,7 @@ Antes de começar, certifique-se de ter o Git e o Node.js instalados em seu comp
 Git: https://git-scm.com/downloads
 Node.js: https://nodejs.org/en/download/
 Passo a passo
-Clone o repositório  Abra um terminal e execute o seguinte comando para clonar o repositório:  <pre>git clone https://github.com/Pedrohsbessa/Atech.git </pre>  
+Clone o repositório  Abra um terminal e execute o seguinte comando para clonar o repositório:  <pre>git clone https://github.com/Pedrohsbessa/atech.git </pre>  
 Navegue até o diretório do projeto  Use o comando cd para navegar até o diretório do projeto:  <pre>cd endereço-local </pre>
 Instale as dependências  Execute o seguinte comando para instalar todas as dependências necessárias para o projeto:  <pre>npm install </pre>
 Inicie o servidor de desenvolvimento  Agora você pode iniciar o servidor de desenvolvimento com o seguinte comando:  <pre>npm start </pre> Isso iniciará o servidor de desenvolvimento e você poderá acessar o aplicativo em http://localhost:4200.  
