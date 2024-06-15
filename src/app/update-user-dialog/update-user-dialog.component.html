@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Atualizar Usuário</h2>
+<mat-dialog-content>
+  <form [formGroup]="updateForm">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="updateForm.get('email')?.invalid && updateForm.get('email')?.touched">
+        Por favor, insira um email válido.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName="phone" (keypress)="numberOnly($event)" maxlength="11">
+      <mat-error *ngIf="updateForm.get('phone')?.invalid && updateForm.get('phone')?.touched">
+        Por favor, insira um número de telefone válido.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [mat-dialog-close]="updateForm.value" [disabled]="updateForm.invalid">Salvar</button>
+</mat-dialog-actions>

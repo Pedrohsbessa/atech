@@ -1,0 +1,26 @@
+<div class="container">
+  <a mat-raised-button color="primary" routerLink="/user-list" class="mat-raised-button right-button">Lista de Usuários</a>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Formulário de Usuário</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="name" name="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="email" required type="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Telefone</mat-label>
+          <input matInput [(ngModel)]="phone" name="phone" maxlength="11" (keypress)="numberOnly($event)">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid">Salvar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
